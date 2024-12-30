@@ -22,8 +22,3 @@ body {
 	color: var(--foreground);
 	background: var(--background);
 }
-
-.katex {
-	font-family: "Montserrat", sans-serif;
-}
-

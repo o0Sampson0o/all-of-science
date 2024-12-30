@@ -1,3 +1,3 @@
-export default function Page({ children, className }: { children: React.ReactNode; className?: string }) {
-	return <div className={className}>{children}</div>;
+export default function Page({ children, ...rest }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) {
+	return <div {...rest}>{children}</div>;
 }
