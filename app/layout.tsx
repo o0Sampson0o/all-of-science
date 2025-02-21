@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import "katex/dist/katex.min.css";
 import "./globals.css";
 
 const monstserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
@@ -10,14 +11,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children
+	children,
+	modal
 }: Readonly<{
 	children: React.ReactNode;
+	modal: React.ReactNode;
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${monstserrat.className} antialiased p-5`}>{children}</body>
+			<body className={`${monstserrat.className} antialiased p-5`}>
+				{children}
+				{modal}
+			</body>
 		</html>
 	);
 }
-
