@@ -2,9 +2,9 @@
 
 ## Structure
 
-```c
-(incident)
-├── -530
+```none
+_incident
+├── _530
 │   └── Discovery of the Pythagorean Theorem
 │       ├── index.ts
 │       ├── page.tsx
@@ -21,7 +21,7 @@
         └── summary.tsx
 ```
 
-Notice in the above example, we have a `-530`, the **dash** implies this is in the unit of **BCE** or else it is just CE like `1609` in the example above.
+Notice in the above example, we have a `_530`, the **underscore** implies this is in the unit of **BCE** or else it is just CE like `1609` in the example above.
 
 Under each date of incident, we will have list of incidents which is recognized by the name of incident. Then under each incident, we will have 3 mandatory files. The files are
 
@@ -37,11 +37,8 @@ The format of this file is fixed. It is only used for more convenient import/exp
 import Page from "./page";
 import Summary from "./summary";
 
-const incidentName = "Discovery of the Pythagorean Theorem";
-
 export default Page;
-export { incidentName, Summary };
-
+export { Summary };
 ```
 
 ## page.tsx
